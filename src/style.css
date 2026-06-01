@@ -24,7 +24,7 @@
     --fg: oklch(15% 0.02 100);
     --muted: oklch(40% 0.02 100);
     --border: oklch(15% 0.02 100);
-    --accent: oklch(60% 0.22 25);
+    --accent: #8B6B1B;
 
     --font-display: 'Times New Roman', 'Iowan Old Style', Georgia, serif;
     --font-body: ui-monospace, 'IBM Plex Mono', 'JetBrains Mono', Menlo, monospace;

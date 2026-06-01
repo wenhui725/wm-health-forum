@@ -1,4 +1,16 @@
+const siteHeader = document.querySelector("#siteHeader");
 
+window.addEventListener("scroll", () => {
+    const isScrolled = window.scrollY > 20;
+
+    siteHeader?.classList.toggle("bg-paper/0", isScrolled);
+    siteHeader?.classList.toggle("backdrop-blur-xl", isScrolled);
+    siteHeader?.classList.toggle("shadow-quiet", isScrolled);
+    siteHeader?.classList.toggle("border-line/20", isScrolled);
+
+    siteHeader?.classList.toggle("bg-paper", !isScrolled);
+    siteHeader?.classList.toggle("border-transparent", !isScrolled);
+});
 const menuButton = document.querySelector("#menuButton");
 const mobileMenu = document.querySelector("#mobileMenu");
 
