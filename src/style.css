@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-mist: var(--mist);
+  --color-clay: var(--clay);
+  --color-sage: var(--sage);
+
+  --font-display: var(--font-display-tc);
+  --font-body: var(--font-body-tc);
+  --font-mono: var(--font-mono-tc);
+
+  --shadow-quiet: 0 18px 60px color-mix(in oklch, var(--fg) 8%, transparent);
+}
+
+:root {
+  --bg:      oklch(98% 0.004 240);
+  --surface: oklch(100% 0 0);
+  --fg:      oklch(15% 0.02 100);
+  --muted:   oklch(40% 0.02 100);
+  --border:  oklch(15% 0.02 100);
+  --accent:  oklch(60% 0.22 25);
+
+  --font-display: 'Times New Roman', 'Iowan Old Style', Georgia, serif;
+  --font-body:    ui-monospace, 'IBM Plex Mono', 'JetBrains Mono', Menlo, monospace;
+}
