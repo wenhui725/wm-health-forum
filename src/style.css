@@ -12,9 +12,10 @@
     --color-sage: var(--sage);
     --color-accent-2: var(--accent-2);
 
-    --font-display: var(--font-display-tc);
-    --font-body: var(--font-body-tc);
+    --font-display: var(--font-sans-tc);
+    --font-body: var(--font-sans-tc);
     --font-mono: var(--font-mono-tc);
+    --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
 
     --shadow-quiet: 0 18px 60px color-mix(in oklch, var(--fg) 8%, transparent);
 }
@@ -22,14 +23,15 @@
 :root {
     --bg: oklch(98% 0.004 240);
     --surface: oklch(100% 0 0);
-    --fg: #1d1d1d;
+    --fg: #0d0b03;
     --muted: #425066;
-    --border: #393939;
+    --border: #0d0b03;
     --accent: #8B6B1B;
     --accent-2: #CE0045;
 
-    --font-display: 'Times New Roman', 'Iowan Old Style', Georgia, serif;
-    --font-body: ui-monospace, 'IBM Plex Mono', 'JetBrains Mono', Menlo, monospace;
+    --font-sans-tc: "Noto Sans TC", "Source Han Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+    --font-serif-tc: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", serif;
+    --font-mono-tc: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 
 .nav-link.is-active {
