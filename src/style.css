@@ -10,6 +10,7 @@
     --color-mist: var(--mist);
     --color-clay: var(--clay);
     --color-sage: var(--sage);
+    --color-accent-2: var(--accent-2);
 
     --font-display: var(--font-display-tc);
     --font-body: var(--font-body-tc);
@@ -21,11 +22,19 @@
 :root {
     --bg: oklch(98% 0.004 240);
     --surface: oklch(100% 0 0);
-    --fg: #0d0b03;
-    --muted: oklch(40% 0.02 100);
-    --border: oklch(15% 0.02 100);
+    --fg: #1d1d1d;
+    --muted: #425066;
+    --border: #393939;
     --accent: #8B6B1B;
+    --accent-2: #CE0045;
 
     --font-display: 'Times New Roman', 'Iowan Old Style', Georgia, serif;
     --font-body: ui-monospace, 'IBM Plex Mono', 'JetBrains Mono', Menlo, monospace;
+}
+
+.nav-link.is-active {
+    border-color: var(--accent);
+    background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--accent);
+    font-weight: 900;
 }
