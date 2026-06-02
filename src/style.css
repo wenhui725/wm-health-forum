@@ -21,7 +21,7 @@
 :root {
     --bg: oklch(98% 0.004 240);
     --surface: oklch(100% 0 0);
-    --fg: oklch(15% 0.02 100);
+    --fg: #0d0b03;
     --muted: oklch(40% 0.02 100);
     --border: oklch(15% 0.02 100);
     --accent: #8B6B1B;

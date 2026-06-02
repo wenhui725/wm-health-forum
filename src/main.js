@@ -1,4 +1,16 @@
+const headerEl = document.querySelector("#siteHeader");
 
+const updateHeaderGlass = () => {
+    const isScrolled = window.scrollY > 20;
+
+    headerEl?.classList.toggle("bg-paper", !isScrolled);
+    headerEl?.classList.toggle("bg-paper/70", isScrolled);
+    headerEl?.classList.toggle("backdrop-blur-2xl", isScrolled);
+    headerEl?.classList.toggle("shadow-quiet", isScrolled);
+};
+
+window.addEventListener("scroll", updateHeaderGlass);
+updateHeaderGlass();
 const menuButton = document.querySelector("#menuButton");
 const mobileMenu = document.querySelector("#mobileMenu");
 

@@ -8,42 +8,86 @@
     <meta name="description" content="威力馬國際第 23 次健康論壇，聚焦情緒壓力、身體訊號與內分泌失衡。">
     <link rel="stylesheet" href="/src/style.css">
 </head>
+
 <body class="bg-paper text-ink">
-    <header class="fixed inset-x-0 top-0 z-50 border-b soft-rule bg-paper/88 backdrop-blur-xl">
-        <div class="mx-auto flex max-w-420 items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
-            <a href="#top" class="group flex items-center gap-3" aria-label="回到頁首">
-                <span class="grid h-10 w-10 place-items-center border ink-line text-sm font-bold text-accent">23</span>
-                <span class="hidden leading-tight sm:block">
-                    <span class="block text-[13px] font-semibold tracking-[.18em]">WELLIMA HEALTH FORUM</span>
-                    <span class="block text-xs text-muted">威力馬國際健康論壇</span>
-                </span>
+    <header id="siteHeader"
+        class="fixed inset-x-0 top-0 z-50 border-b border-line/10 bg-paper transition-all duration-300">
+        <div class="mx-auto flex max-w-420 items-center justify-between px-6 py-6 sm:px-8 lg:px-14 lg:py-6">
+            <!-- Logo：點擊後回到 Hero 區 -->
+            <a href="#theme" class="group flex items-center gap-3" aria-label="回到活動主視覺">
+                <img src="/src/img/logo-light.webp" alt="威力馬國際"
+                    class="h-8 w-auto transition-transform duration-300 group-hover:scale-105">
             </a>
-            <nav class="hidden items-center gap-6 text-[13px] font-medium text-muted lg:flex" aria-label="章節導覽">
-                <a class="nav-link" href="#theme">01 主題</a>
-                <a class="nav-link" href="#doctor">02 醫師</a>
-                <a class="nav-link" href="#ticket">03 票券</a>
-                <a class="nav-link" href="#story">04 影音</a>
-                <a class="nav-link" href="#lineup">05 陣容</a>
-                <a class="nav-link" href="#manager">06 新經理</a>
-                <a class="nav-link" href="#field">07 場外</a>
+
+            <!-- 桌機版 Nav -->
+            <nav class="hidden items-center gap-2 text-[13px] font-medium text-ink lg:flex" aria-label="章節導覽">
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#theme">
+                    主題曝光
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#doctor">
+                    主講醫師
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#ticket">
+                    票券資訊
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#story">
+                    前導影音
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#lineup">
+                    活動陣容
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#manager">
+                    新經理
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#field">
+                    場外活動
+                </a>
+                <a class="nav-link border border-transparent px-4 py-2 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent hover:font-black [&.is-active]:border-accent [&.is-active]:bg-accent/10 [&.is-active]:text-accent [&.is-active]:font-black"
+                    href="#gallery">
+                    活動紀錄
+                </a>
             </nav>
-            <button id="menuButton" class="border ink-line px-4 py-2 text-xs font-semibold tracking-[.22em] lg:hidden"
-                type="button" aria-expanded="false" aria-controls="mobileMenu">MENU</button>
+
+            <!-- 手機版 MENU 按鈕 -->
+            <button id="menuButton"
+                class="border border-line/30 px-5 py-2.5 text-xs font-semibold tracking-[.22em] text-ink transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:font-black lg:hidden"
+                type="button" aria-expanded="false" aria-controls="mobileMenu">
+                MENU
+            </button>
         </div>
-        <div id="mobileMenu" class="hidden border-t soft-rule bg-surface px-4 py-4 lg:hidden">
+        <!-- 手機版選單 -->
+        <div id="mobileMenu"
+            class="hidden border-t border-line/20 bg-paper/95 px-4 py-5 shadow-quiet backdrop-blur-xl lg:hidden">
             <div class="grid grid-cols-2 gap-3 text-sm">
-                <a class="border soft-rule p-3" href="#theme">01 主題曝光</a>
-                <a class="border soft-rule p-3" href="#doctor">02 主講醫師</a>
-                <a class="border soft-rule p-3" href="#ticket">03 票券優惠</a>
-                <a class="border soft-rule p-3" href="#story">04 短影音故事</a>
-                <a class="border soft-rule p-3" href="#lineup">05 陣容</a>
-                <a class="border soft-rule p-3" href="#manager">06 新經理</a>
-                <a class="border soft-rule p-3" href="#field">07 場外活動</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#theme">01 主題曝光</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#doctor">02 主講醫師</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#ticket">03 票券資訊</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#story">04 前導影音</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#lineup">05 活動陣容</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#manager">06 新經理</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#field">07 場外活動</a>
+                <a class="border border-line/20 bg-surface/80 p-4 text-muted transition-all duration-300 hover:border-accent hover:bg-surface hover:text-accent hover:font-black"
+                    href="#gallery">08 活動紀錄</a>
             </div>
         </div>
     </header>
 
     <main id="top">
+        <!-- 01主題曝光hero -->
         <section id="theme" class="mag-grid min-h-screen border-b ink-line pt-24">
             <div
                 class="mx-auto grid max-w-420 gap-10 px-4 pb-14 pt-12 sm:px-6 md:grid-cols-[minmax(0,1.15fr)_minmax(280px,.85fr)] md:pb-20 lg:px-10 lg:pt-20 xl:gap-16">
@@ -95,22 +139,10 @@
             </div>
         </section>
 
-        <section class="border-b ink-line bg-surface">
-            <div class="mx-auto grid max-w-420 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-10">
-                <div class="md:col-span-1">
-                    <p class="mono text-xs tracking-[.24em] text-muted">EDITORIAL INDEX</p>
-                </div>
-                <div class="grid gap-4 md:col-span-3 md:grid-cols-3">
-                    <p class="serif text-3xl leading-snug">醫學專業</p>
-                    <p class="serif text-3xl leading-snug">身心覺察</p>
-                    <p class="serif text-3xl leading-snug">品牌信任感</p>
-                </div>
-            </div>
-        </section>
+        <!-- 02主講醫師 -->
 
         <section id="doctor" class="reveal border-b ink-line">
-            <div
-                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 md:grid-cols-[.42fr_1fr] lg:px-10 lg:py-28">
+            <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 md:grid-cols-[.42fr_1fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">02 / 主講醫師</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">從壓力軸線，讀懂身體的求救訊號。
@@ -165,6 +197,7 @@
             </div>
         </section>
 
+        <!-- 03票券優惠 -->
         <section id="ticket" class="reveal border-b ink-line mist-band">
             <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.5fr_1fr]">
@@ -205,9 +238,9 @@
             </div>
         </section>
 
+        <!-- 04短影音故事 -->
         <section id="story" class="reveal border-b ink-line bg-surface">
-            <div
-                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:py-28">
+            <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">04 / 短影音故事</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
@@ -255,6 +288,7 @@
             </div>
         </section>
 
+        <!-- 05 主持／主講／分享陣容 -->
         <section id="lineup" class="reveal border-b ink-line">
             <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 md:grid-cols-[.38fr_1fr]">
@@ -295,9 +329,9 @@
             </div>
         </section>
 
+        <!-- 06 新經理優惠 -->
         <section id="manager" class="reveal border-b ink-line bg-ink text-surface">
-            <div
-                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">
+            <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">06 / 新經理優惠</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
@@ -325,6 +359,7 @@
             </div>
         </section>
 
+        <!-- 07 / 場外活動 -->
         <section id="field" class="reveal bg-paper">
             <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
@@ -356,6 +391,82 @@
                         <p class="mono text-xs tracking-[.22em] text-muted">FIELD 04</p>
                         <h3 class="serif mt-10 text-4xl leading-tight">品牌諮詢桌</h3>
                         <p class="mt-6 text-sm leading-loose text-muted">提供溫和清楚的後續諮詢路徑，保留企業服務的可信度。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08 / 活動紀錄 -->
+        <section id="gallery" class="reveal border-t ink-line bg-paper">
+            <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+                <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
+                    <div>
+                        <p class="mono text-xs font-semibold tracking-[.28em] text-accent">
+                            08 / Event Gallery
+                        </p>
+                        <h2 class="serif mt-6 text-5xl leading-tight sm:text-6xl">
+                            活動紀錄
+                        </h2>
+                    </div>
+
+                    <p class="body-copy max-w-3xl text-lg text-muted">
+                        收錄第 23 次健康論壇的主視覺、主講片段、現場互動、夥伴合影與活動花絮。
+                        透過照片整理活動當天的重要時刻，延續論壇後的品牌記憶與參與感。
+                    </p>
+                </div>
+
+                <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                    <article class="editorial-card overflow-hidden">
+                        <div class="aspect-4/3 bg-mist">
+                            <!-- 之後圖片放這裡 -->
+                            <img src="/src/img/gallery-01.webp" alt="主講現場" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 01</p>
+                            <h3 class="serif mt-4 text-3xl">主講現場</h3>
+                            <p class="mt-3 text-sm leading-loose text-muted">
+                                醫師講座與主題分享紀錄。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card overflow-hidden">
+                        <div class="aspect-4/3 bg-mist">
+                            <img src="/src/img/gallery-02.webp" alt="表揚與授證" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 02</p>
+                            <h3 class="serif mt-4 text-3xl">表揚與授證</h3>
+                            <p class="mt-3 text-sm leading-loose text-muted">
+                                團隊夥伴的重要里程碑。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card overflow-hidden">
+                        <div class="aspect-4/3 bg-mist">
+                            <img src="/src/img/gallery-03.webp" alt="場外活動" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 03</p>
+                            <h3 class="serif mt-4 text-3xl">場外活動</h3>
+                            <p class="mt-3 text-sm leading-loose text-muted">
+                                互動體驗、交流與展區花絮。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card overflow-hidden">
+                        <div class="aspect-4/3 bg-mist">
+                            <img src="/src/img/gallery-04.webp" alt="活動合影" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 04</p>
+                            <h3 class="serif mt-4 text-3xl">活動合影</h3>
+                            <p class="mt-3 text-sm leading-loose text-muted">
+                                參與者、團隊與現場合照。
+                            </p>
+                        </div>
                     </article>
                 </div>
             </div>
