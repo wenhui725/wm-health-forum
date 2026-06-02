@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" class="scroll-smooth scroll-pt-24">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
 </head>
 <body class="bg-paper text-ink">
     <header class="fixed inset-x-0 top-0 z-50 border-b soft-rule bg-paper/88 backdrop-blur-xl">
-        <div class="mx-auto flex max-w-[1680px] items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+        <div class="mx-auto flex max-w-420 items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
             <a href="#top" class="group flex items-center gap-3" aria-label="回到頁首">
                 <span class="grid h-10 w-10 place-items-center border ink-line text-sm font-bold text-accent">23</span>
                 <span class="hidden leading-tight sm:block">
@@ -46,7 +46,7 @@
     <main id="top">
         <section id="theme" class="mag-grid min-h-screen border-b ink-line pt-24">
             <div
-                class="mx-auto grid max-w-[1680px] gap-10 px-4 pb-14 pt-12 sm:px-6 md:grid-cols-[minmax(0,1.15fr)_minmax(280px,.85fr)] md:pb-20 lg:px-10 lg:pt-20 xl:gap-16">
+                class="mx-auto grid max-w-420 gap-10 px-4 pb-14 pt-12 sm:px-6 md:grid-cols-[minmax(0,1.15fr)_minmax(280px,.85fr)] md:pb-20 lg:px-10 lg:pt-20 xl:gap-16">
                 <div class="flex min-h-[68vh] flex-col justify-between">
                     <div>
                         <p class="mono mb-8 text-xs font-semibold uppercase tracking-[.28em] text-accent">01 / Major
@@ -73,7 +73,7 @@
 
                 <aside
                     class="reveal grid content-between gap-8 border ink-line bg-surface p-5 sm:p-8 md:sticky md:top-24 md:min-h-[68vh]">
-                    <div class="aspect-[4/5] overflow-hidden border ink-line bg-mist">
+                    <div class="aspect-4/5 overflow-hidden border ink-line bg-mist">
                         <div class="grid h-full place-items-center p-8">
                             <div class="relative h-full w-full border ink-line bg-paper">
                                 <div class="absolute left-8 top-8 h-24 w-24 border ink-line bg-sage"></div>
@@ -96,7 +96,7 @@
         </section>
 
         <section class="border-b ink-line bg-surface">
-            <div class="mx-auto grid max-w-[1680px] gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-10">
+            <div class="mx-auto grid max-w-420 gap-8 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-10">
                 <div class="md:col-span-1">
                     <p class="mono text-xs tracking-[.24em] text-muted">EDITORIAL INDEX</p>
                 </div>
@@ -110,14 +110,14 @@
 
         <section id="doctor" class="reveal border-b ink-line">
             <div
-                class="mx-auto grid max-w-[1680px] gap-10 px-4 py-20 sm:px-6 md:grid-cols-[.42fr_1fr] lg:px-10 lg:py-28">
+                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 md:grid-cols-[.42fr_1fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">02 / 主講醫師</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">從壓力軸線，讀懂身體的求救訊號。
                     </h2>
                 </div>
                 <div class="grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-                    <div class="editorial-card min-h-[520px] p-6">
+                    <div class="editorial-card min-h-130 p-6">
                         <div class="flex h-full flex-col justify-between border ink-line bg-mist p-6">
                             <div>
                                 <p class="mono text-xs tracking-[.24em] text-muted">KEYNOTE DOCTOR</p>
@@ -166,7 +166,7 @@
         </section>
 
         <section id="ticket" class="reveal border-b ink-line mist-band">
-            <div class="mx-auto max-w-[1680px] px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+            <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.5fr_1fr]">
                     <div>
                         <p class="mono text-xs font-semibold tracking-[.28em] text-accent">03 / 票券優惠</p>
@@ -207,7 +207,7 @@
 
         <section id="story" class="reveal border-b ink-line bg-surface">
             <div
-                class="mx-auto grid max-w-[1680px] gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:py-28">
+                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">04 / 短影音故事</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
@@ -222,7 +222,7 @@
                     </div>
                 </div>
                 <div class="grid gap-6 md:grid-cols-[.72fr_1fr]">
-                    <div class="aspect-[9/16] border ink-line bg-ink p-4 text-surface">
+                    <div class="aspect-9/16 border ink-line bg-ink p-4 text-surface">
                         <div class="flex h-full flex-col justify-between border surface-line-strong p-5">
                             <p class="mono surface-muted text-xs tracking-[.22em]">SHORT FILM 01</p>
                             <div>
@@ -256,7 +256,7 @@
         </section>
 
         <section id="lineup" class="reveal border-b ink-line">
-            <div class="mx-auto max-w-[1680px] px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+            <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 md:grid-cols-[.38fr_1fr]">
                     <div>
                         <p class="mono text-xs font-semibold tracking-[.28em] text-accent">05 / 主持／主講／分享陣容</p>
@@ -297,7 +297,7 @@
 
         <section id="manager" class="reveal border-b ink-line bg-ink text-surface">
             <div
-                class="mx-auto grid max-w-[1680px] gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">
+                class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">
                 <div>
                     <p class="mono text-xs font-semibold tracking-[.28em] text-accent">06 / 新經理優惠</p>
                     <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">
@@ -326,7 +326,7 @@
         </section>
 
         <section id="field" class="reveal bg-paper">
-            <div class="mx-auto max-w-[1680px] px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+            <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
                 <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
                     <div>
                         <p class="mono text-xs font-semibold tracking-[.28em] text-accent">07 / 場外活動</p>
@@ -363,7 +363,7 @@
     </main>
 
     <footer class="border-t ink-line bg-surface">
-        <div class="mx-auto grid max-w-[1680px] gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1fr_auto] lg:px-10">
+        <div class="mx-auto grid max-w-420 gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1fr_auto] lg:px-10">
             <div>
                 <p class="mono text-xs tracking-[.24em] text-muted">WELLIMA INTERNATIONAL</p>
                 <p class="serif mt-4 text-4xl">第 23 次健康論壇</p>
