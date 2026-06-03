@@ -124,10 +124,10 @@ const updateNavActive = () => {
         }
     });
 
-if (!currentId) {
-    clearNavActive();
-    return;
-}
+    if (!currentId) {
+        clearNavActive();
+        return;
+    }
 
     setNavActive(currentId);
 };
