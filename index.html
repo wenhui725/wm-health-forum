@@ -91,7 +91,7 @@
     </header>
 
     <!-- 01 主題曝光 Hero -->
-    <section id="theme" class="mag-grid min-h-screen border-b ink-line pt-28">
+    <section id="theme" class="mag-grid min-h-screen  pt-28">
         <div
             class="mx-auto grid max-w-420 gap-10 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-[minmax(0,1fr)_minmax(320px,.9fr)] md:pb-20 lg:px-10 lg:pt-16 xl:gap-16">
             <!-- 左側：主標與 CTA -->
@@ -150,7 +150,8 @@
             <aside
                 class="reveal grid content-between gap-8 border ink-line bg-surface p-4 sm:p-6 md:sticky md:top-28 md:min-h-[68vh]">
                 <div class="aspect-4/5 overflow-hidden border ink-line bg-mist">
-                    <img src="./src/img/主視覺/第23次健康論壇主視覺_A4DM.webp" alt="威力馬國際第23次健康論壇主視覺" class="h-full w-full object-cover">
+                    <img src="./src/img/主視覺/第23次健康論壇主視覺_A4DM.webp" alt="威力馬國際第23次健康論壇主視覺"
+                        class="h-full w-full object-cover">
                 </div>
 
                 <p class="body-copy text-base text-muted">
@@ -162,55 +163,123 @@
     </section>
 
     <!-- 02主講醫師 -->
-
-    <section id="doctor" class="reveal border-b ink-line">
+    <section id="doctor" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 md:grid-cols-[.42fr_1fr] lg:px-10 lg:py-28">
+            <!-- 左側章節標題 -->
             <div>
-                <p class="mono text-xs font-semibold tracking-[.28em] text-accent">02 / 主講醫師</p>
-                <h2 class="serif chapter-title mt-6 text-5xl leading-tight sm:text-6xl lg:text-7xl">從壓力軸線，讀懂身體的求救訊號。
+                <p class="font-mono mb-8 text-xs uppercase tracking-[.28em] text-border">
+                    02 / 主講醫師
+                </p>
+
+                <h2 class="font-serif mt-6 text-5xl leading-tight tracking-[-0.03em] sm:text-6xl lg:text-7xl">
+                    把「不舒服」<br>
+                    重新翻譯成<br>
+                    <b class="text-accent font-medium">
+                        可以被理解的<br>
+                        身體語言。</b>
                 </h2>
+
+                <p class="body-copy mt-8 max-w-md text-base leading-loose text-muted">
+                    從醫師觀點出發，說明壓力與睡眠、代謝、荷爾蒙及情緒穩定之間的關聯，協助夥伴提早看見身體訊號，在日常中建立更完整的健康覺察。
+                </p>
             </div>
-            <div class="grid gap-6 lg:grid-cols-[.9fr_1.1fr]">
-                <div class="editorial-card min-h-130 p-6">
-                    <div class="flex h-full flex-col justify-between border ink-line bg-mist p-6">
-                        <div>
-                            <p class="mono text-xs tracking-[.24em] text-muted">KEYNOTE DOCTOR</p>
-                            <div class="mt-10 h-40 w-32 border ink-line bg-surface"></div>
+            <!-- 右側主內容 -->
+            <div class="grid gap-6">
+                <article class="editorial-card border ink-line bg-paper p-5 sm:p-6">
+                    <div class="grid gap-6 lg:grid-cols-[260px_1fr] xl:grid-cols-[300px_1fr]">
+                        <!-- 左側：直式醫師合照 -->
+                        <div class="overflow-hidden bg-mist">
+                            <img src="./src/img/醫師貴賓/許瑞云醫師 鄭先安醫師 (4).webp" alt="許瑞云醫師與鄭先安醫師合照"
+                                class="mx-auto h-full max-h-[430px] w-full object-contain object-center">
                         </div>
-                        <div>
-                            <p class="serif text-5xl">Dr. Chen</p>
-                            <p class="mt-3 text-sm leading-relaxed text-muted">內分泌與代謝醫學｜主講醫師姓名待置換</p>
+
+                        <div
+                            class="flex flex-col justify-center border-t ink-line pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+                            <p class="mono text-xs font-semibold tracking-[.24em] text-muted">
+                                KEYNOTE DOCTORS
+                            </p>
+
+                            <h3 class="font-serif mt-5 text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">
+                                許瑞云醫師 ×
+                                鄭先安醫師
+                            </h3>
+
+                            <p class="body-copy mt-6 text-base leading-loose text-muted">
+                                從醫學、身心能量與全人照護角度，帶領夥伴重新理解情緒壓力、身體訊號與內分泌失衡之間的關聯。
+                            </p>
                         </div>
                     </div>
-                </div>
-                <article class="grid content-between gap-8">
-                    <div class="border-t ink-line pt-6">
-                        <p class="body-copy text-xl text-muted">
-                            本論壇以「情緒壓力如何改變身體節律」為主軸，從睡眠、疲憊、食慾、體重波動與女性週期等日常訊號切入，建立大眾可理解、企業可傳遞的健康敘事。
+                </article>
+
+                <!-- 兩位醫師資料卡 -->
+                <div class="grid gap-4 lg:grid-cols-2">
+                    <article
+                        class="border ink-line bg-surface p-5 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5">
+                        <p class="mono text-xs tracking-[.22em] text-accent-2">
+                            SPEAKER 01
                         </p>
+
+                        <h4 class="font-serif mt-4 text-3xl leading-none tracking-[-0.03em]">
+                            許瑞云醫師
+                        </h4>
+
+                        <div class="mt-5 space-y-2 text-sm leading-loose text-muted">
+                            <p>心能量管理中心 執行長</p>
+                            <p>哈佛大學醫學院講師／內科主治醫師</p>
+                            <p>能量醫學與心靈諮商專家</p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="border ink-line bg-surface p-5 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5">
+                        <p class="mono text-xs tracking-[.22em] text-accent-2">
+                            SPEAKER 02
+                        </p>
+
+                        <h4 class="font-serif mt-4 text-3xl leading-none tracking-[-0.03em]">
+                            鄭先安醫師
+                        </h4>
+
+                        <div class="mt-5 space-y-2 text-sm leading-loose text-muted">
+                            <p>心能量管理中心 院長</p>
+                            <p>神經科、內科、中醫四專科醫師</p>
+                            <p>慢性病逆轉與全人整合照護專家</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Focus + 展開摘要 -->
+                <article class="grid content-between gap-6">
+                    <div class="grid gap-4 sm:grid-cols-3 bg-surface">
+                        <div
+                            class=" border ink-line p-5 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5">
+                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
+                            <p class="mt-5 text-lg font-semibold">情緒壓力</p>
+                        </div>
+
+                        <div
+                            class="border ink-line p-5 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5">
+                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
+                            <p class="mt-5 text-lg font-semibold">內分泌失衡</p>
+                        </div>
+
+                        <div
+                            class="border ink-line p-5 transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5">
+                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
+                            <p class="mt-5 text-lg font-semibold">身心連動</p>
+                        </div>
                     </div>
-                    <div class="grid gap-4 sm:grid-cols-3">
-                        <div class="border ink-line p-5">
-                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
-                            <p class="mt-5 text-lg font-semibold">壓力荷爾蒙</p>
-                        </div>
-                        <div class="border ink-line p-5">
-                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
-                            <p class="mt-5 text-lg font-semibold">內分泌節律</p>
-                        </div>
-                        <div class="border ink-line p-5">
-                            <p class="mono text-xs tracking-[.2em] text-muted">FOCUS</p>
-                            <p class="mt-5 text-lg font-semibold">身體覺察</p>
-                        </div>
-                    </div>
-                    <button class="speaker-toggle w-full border ink-line px-6 py-5 text-left transition hover:bg-mist"
+
+                    <button
+                        class="speaker-toggle w-full border ink-line px-6 py-5 text-left bg-surface transition-all duration-300 hover:border-accent-2 hover:bg-accent-2/5"
                         type="button" aria-expanded="false">
                         <span class="flex items-center justify-between gap-6">
                             <span class="font-semibold">展開醫師講題摘要</span>
                             <span class="mono text-sm">＋</span>
                         </span>
-                        <span class="speaker-detail hidden pt-5 body-copy text-sm text-muted">
-                            講題摘要｜以臨床經驗與最新健康教育觀點，說明慢性壓力如何透過神經內分泌系統影響睡眠、代謝與情緒穩定，並提供可落地的日常觀察框架。
+
+                        <span class="speaker-detail hidden pt-5 body-copy text-sm leading-loose text-muted">
+                            講題摘要｜從情緒出口、身體警訊到健康管理，兩位醫師將以臨床經驗、身心能量與全人照護觀點，說明慢性壓力如何透過神經內分泌系統影響睡眠、代謝、情緒穩定與日常健康狀態，協助夥伴看見被忽略的身心連動。
                         </span>
                     </button>
                 </article>
@@ -219,7 +288,7 @@
     </section>
 
     <!-- 03票券優惠 -->
-    <section id="ticket" class="reveal border-b ink-line mist-band">
+    <section id="ticket" class="reveal mist-band">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
             <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.5fr_1fr]">
                 <div>
@@ -260,7 +329,7 @@
     </section>
 
     <!-- 04短影音故事 -->
-    <section id="story" class="reveal border-b ink-line bg-surface">
+    <section id="story" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-10 lg:py-28">
             <div>
                 <p class="mono text-xs font-semibold tracking-[.28em] text-accent">04 / 短影音故事</p>
@@ -310,7 +379,7 @@
     </section>
 
     <!-- 05 主持／主講／分享陣容 -->
-    <section id="lineup" class="reveal border-b ink-line">
+    <section id="lineup" class="reveal mist-band">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
             <div class="grid gap-10 md:grid-cols-[.38fr_1fr]">
                 <div>
@@ -351,7 +420,7 @@
     </section>
 
     <!-- 06 新經理優惠 -->
-    <section id="manager" class="reveal border-b ink-line bg-ink text-surface">
+    <section id="manager" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">
             <div>
                 <p class="mono text-xs font-semibold tracking-[.28em] text-accent">06 / 新經理優惠</p>
@@ -381,7 +450,7 @@
     </section>
 
     <!-- 07 / 場外活動 -->
-    <section id="field" class="reveal bg-paper">
+    <section id="field" class="reveal mist-band">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
             <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
                 <div>
@@ -418,7 +487,7 @@
     </section>
 
     <!-- 08 / 活動紀錄 -->
-    <section id="gallery" class="reveal border-t ink-line bg-paper">
+    <section id="gallery" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
             <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
                 <div>
@@ -494,7 +563,7 @@
     </section>
     </main>
 
-    <footer class="border-t ink-line bg-surface">
+    <footer class="border-t ink-line bg-[#000]">
         <div class="mx-auto grid max-w-420 gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1fr_auto] lg:px-10">
             <div>
                 <p class="mono text-xs tracking-[.24em] text-muted">WELLIMA INTERNATIONAL</p>
