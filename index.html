@@ -787,7 +787,7 @@
                         </div>
 
                         <div class="border-l-2 border-accent-2 pl-5">
-                        <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
+                            <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
                                 GIFT NOTICE
                             </p>
                             <p class="mt-3 text-xl font-semibold text-black">
@@ -875,89 +875,282 @@
     <!-- 08 / 活動紀錄 -->
     <section id="gallery" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
-            <div class="grid gap-10 border-b ink-line pb-12 md:grid-cols-[.4fr_1fr]">
+            <div class="grid gap-12 lg:grid-cols-[.82fr_1fr] lg:items-end">
                 <div>
-                    <p class="mono text-xs font-semibold tracking-[.28em] text-accent">
-                        08 / Event Gallery
+                    <p class="font-mono mb-8 text-xs font-semibold uppercase tracking-[.28em] text-border">
+                        08 / 活動紀錄
                     </p>
-                    <h2 class="serif mt-6 text-5xl leading-tight sm:text-6xl">
-                        活動紀錄
+
+                    <h2 class="font-serif chapter-title mt-6 text-5xl leading-tight text-black sm:text-6xl lg:text-7xl">
+                        第 23 次健康論壇<br>
+                        已圓滿落幕，<br>
+                        <b class="font-medium text-accent">
+                            現場影像與精彩片段<br>
+                            陸續整理中。
+                        </b>
                     </h2>
                 </div>
 
-                <p class="body-copy max-w-3xl text-lg text-muted">
-                    收錄第 23 次健康論壇的主視覺、主講片段、現場互動、夥伴合影與活動花絮。
-                    透過照片整理活動當天的重要時刻，延續論壇後的品牌記憶與參與感。
-                </p>
+                <div>
+                    <p class="body-copy max-w-3xl text-lg font-medium leading-loose text-muted sm:text-xl">
+                        從主講醫師的專業觀點、夥伴的真實分享，到場外闖關互動與會後花絮，
+                        第 23 次健康論壇記錄的不只是活動過程，
+                        更是每一位參與者重新理解身體、照顧自己與分享健康的片刻。
+                    </p>
+
+                    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                        <div class="border-l-2 border-accent-2 pl-5">
+                            <p class="font-mono text-xs tracking-[.2em] text-accent-2">
+                                PHOTO RECORD
+                            </p>
+                            <p class="mt-3 text-xl font-semibold text-black">
+                                現場照片陸續整理
+                            </p>
+                        </div>
+
+                        <div class="border-l-2 border-accent-2 pl-5">
+                            <p class="font-mono text-xs tracking-[.2em] text-accent-2">
+                                VIDEO RECORD
+                            </p>
+                            <p class="mt-3 text-xl font-semibold text-black">
+                                活動影片持續更新
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                <article class="editorial-card overflow-hidden">
-                    <div class="aspect-4/3 bg-mist">
-                        <!-- 之後圖片放這裡 -->
-                        <img src="/src/img/gallery-01.webp" alt="主講現場" class="h-full w-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 01</p>
-                        <h3 class="serif mt-4 text-3xl">主講現場</h3>
-                        <p class="mt-3 text-sm leading-loose text-muted">
-                            醫師講座與主題分享紀錄。
-                        </p>
-                    </div>
-                </article>
+            <!-- 主紀錄圖 -->
+            <article
+                class="mt-16 grid gap-8 border ink-line bg-surface p-4 shadow-quiet lg:grid-cols-[1.15fr_.85fr] lg:p-6">
+                <figure class="overflow-hidden bg-mist">
+                    <img class="h-full min-h-[360px] w-full object-cover transition duration-700 hover:scale-105"
+                        src="./src/img/活動紀錄/現場直擊.webp" alt="第23次健康論壇活動現場紀錄">
+                </figure>
 
-                <article class="editorial-card overflow-hidden">
-                    <div class="aspect-4/3 bg-mist">
-                        <img src="/src/img/gallery-02.webp" alt="表揚與授證" class="h-full w-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 02</p>
-                        <h3 class="serif mt-4 text-3xl">表揚與授證</h3>
-                        <p class="mt-3 text-sm leading-loose text-muted">
-                            團隊夥伴的重要里程碑。
-                        </p>
-                    </div>
-                </article>
+                <div class="flex flex-col justify-center p-2 lg:p-6">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-[.22em] text-accent-2">
+                        Forum Recap
+                    </p>
 
-                <article class="editorial-card overflow-hidden">
-                    <div class="aspect-4/3 bg-mist">
-                        <img src="/src/img/gallery-03.webp" alt="場外活動" class="h-full w-full object-cover">
-                    </div>
-                    <div class="p-5">
-                        <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 03</p>
-                        <h3 class="serif mt-4 text-3xl">場外活動</h3>
-                        <p class="mt-3 text-sm leading-loose text-muted">
-                            互動體驗、交流與展區花絮。
-                        </p>
-                    </div>
-                </article>
+                    <h3 class="mt-6 font-serif text-4xl font-bold leading-tight text-muted sm:text-5xl">
+                        把健康的提醒，<br>
+                        留成可以回看的記憶。
+                    </h3>
 
-                <article class="editorial-card overflow-hidden">
-                    <div class="aspect-4/3 bg-mist">
-                        <img src="/src/img/gallery-04.webp" alt="活動合影" class="h-full w-full object-cover">
+                    <p class="mt-6 text-base font-medium leading-loose text-border">
+                        本區將收錄第 23 次健康論壇的現場照片、活動片段與會後花絮。
+                        從論壇主講、產品與事業分享，到場外互動與夥伴合影，
+                        持續補上活動當天的重要畫面。
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a class="inline-flex items-center justify-center border border-accent-2 bg-accent-2 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-quiet"
+                            href="#galleryPhotos">
+                            查看現場照片
+                        </a>
+
+                        <a class="inline-flex items-center justify-center border border-accent-2 bg-white px-5 py-3 text-sm font-bold text-accent-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-2 hover:text-white"
+                            href="#galleryVideo">
+                            查看活動影片
+                        </a>
                     </div>
-                    <div class="p-5">
-                        <p class="mono text-xs tracking-[.22em] text-muted">PHOTO 04</p>
-                        <h3 class="serif mt-4 text-3xl">活動合影</h3>
-                        <p class="mt-3 text-sm leading-loose text-muted">
-                            參與者、團隊與現場合照。
+                </div>
+            </article>
+
+            <!-- 雜誌式照片牆 -->
+            <div id="galleryPhotos" class="mt-16">
+                <div class="mb-8 grid gap-6 md:grid-cols-[220px_1fr] md:items-end">
+                    <div>
+                        <p class="font-mono text-xs font-semibold uppercase tracking-[.22em] text-accent-2">
+                            Photo Record
                         </p>
+                        <h3 class="mt-4 font-serif text-4xl font-bold leading-tight text-muted">
+                            論壇現場紀錄
+                        </h3>
                     </div>
+
+                    <p class="body-copy max-w-3xl text-base font-medium leading-loose text-border">
+                        收錄活動當天的主講現場、真實分享、場外互動與夥伴合影。
+                        讓知識交流、健康覺察與現場溫度，都成為可以回看的紀錄。
+                    </p>
+                </div>
+
+                <div class="grid gap-4 lg:grid-cols-4 lg:grid-rows-[260px_260px]">
+                    <article
+                        class="group relative overflow-hidden border ink-line bg-surface lg:col-span-2 lg:row-span-2">
+                        <img class="h-full min-h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
+                            src="./src/img/活動紀錄/DSC05055.webp" alt="活動現場照片 01">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-90">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <p class="font-mono text-xs tracking-[.22em] text-white/70">
+                                PHOTO 01
+                            </p>
+                            <h4 class="mt-3 font-serif text-4xl font-bold">
+                                主講現場
+                            </h4>
+                            <p class="mt-3 max-w-xl text-sm leading-loose text-white/75">
+                                醫師觀點、健康議題與現場聆聽氛圍的主要紀錄。
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden border ink-line bg-surface">
+                        <img class="h-full min-h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
+                            src="./src/img/活動紀錄/活動合影.webp" alt="活動現場照片 02">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                            <p class="font-mono text-xs tracking-[.22em] text-white/70">
+                                PHOTO 02
+                            </p>
+                            <h4 class="mt-2 font-serif text-3xl font-bold">
+                                分享陣容
+                            </h4>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden border ink-line bg-surface">
+                        <img class="h-full min-h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
+                            src="./src/img/活動紀錄/場外活動 (1).webp" alt="活動現場照片 03">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                            <p class="font-mono text-xs tracking-[.22em] text-white/70">
+                                PHOTO 03
+                            </p>
+                            <h4 class="mt-2 font-serif text-3xl font-bold">
+                                場外活動
+                            </h4>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden border ink-line bg-surface lg:col-span-2">
+                        <img class="h-full min-h-[260px] w-full object-cover transition duration-700 group-hover:scale-105"
+                            src="./src/img/活動紀錄/抽獎現場.webp" alt="活動現場照片 04">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        </div>
+
+                        <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                            <p class="font-mono text-xs tracking-[.22em] text-white/70">
+                                PHOTO 04
+                            </p>
+                            <h4 class="mt-2 font-serif text-3xl font-bold">
+                                摸彩直擊
+                            </h4>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 影片與花絮 -->
+            <div id="galleryVideo" class="mt-16 grid gap-5 lg:grid-cols-1">
+
+                <article
+                    class="border ink-line bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-quiet">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-[.22em] text-accent-2">
+                        Highlights
+                    </p>
+
+                    <h3 class="mt-8 font-serif text-4xl font-bold leading-tight text-muted">
+                        會後花絮
+                    </h3>
+
+                    <p class="mt-5 text-base font-medium leading-loose text-border">
+                        後續將剪輯活動花絮、精彩片段與回顧內容，
+                        讓活動現場的溫度與感動能持續被看見。
+                    </p>
+
+                    <p
+                        class="mt-8 inline-flex border border-line/20 px-4 py-2 font-mono text-xs tracking-[.18em] text-muted">
+                        Coming soon
+                    </p>
                 </article>
+            </div>
+
+            <div class="mt-8 border-l-2 border-accent-2 pl-5">
+                <p class="font-mono text-xs tracking-[.2em] text-accent-2">
+                    Update Notice
+                </p>
+                <p class="mt-3 max-w-4xl text-sm leading-loose text-fg">
+                    本區為第 23 次健康論壇活動紀錄區。現場照片與影片將依整理進度陸續更新；
+                    會後花絮、精彩片段或相關回顧內容完成後，也將持續補上。
+                </p>
             </div>
         </div>
     </section>
+
     </main>
 
-    <footer class="border-t ink-line bg-black">
-        <div class="mx-auto grid max-w-420 gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1fr_auto] lg:px-10">
-            <div>
-                <p class="mono text-xs tracking-[.24em] text-muted">WELLIMA INTERNATIONAL</p>
-                <p class="serif mt-4 text-4xl">第 23 次健康論壇</p>
+    <!-- Footer / 下一場活動預告 -->
+    <footer class="bg-black text-white">
+        <div class="mx-auto max-w-420 px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+            <div class="grid gap-12 lg:grid-cols-[1fr_.78fr] lg:items-end">
+                <div>
+                    <p class="font-mono text-xs font-semibold uppercase tracking-[.28em] text-white/45">
+                        Wellmarket International / Health Forum 23
+                    </p>
+
+                    <h2 class="mt-6 font-serif text-5xl font-medium leading-tight sm:text-6xl lg:text-7xl">
+                        一場健康論壇的結束，<br>
+                        也是下一次健康對話的開始。
+                    </h2>
+
+                    <p class="mt-8 max-w-3xl text-base font-medium leading-loose text-white/65 sm:text-lg">
+                        第 23 次健康論壇從情緒壓力、身體訊號到健康管理，
+                        記錄了主講醫師的專業觀點、夥伴的真實分享與活動現場的參與能量。
+                        本頁將持續整理活動照片、影片與會後花絮，
+                        讓當天的學習與感受，成為日後可回顧的品牌紀錄。
+                    </p>
+                </div>
+
+                <aside class="border border-white/20 bg-white/5 p-6">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-[.22em] text-accent">
+                        Next Forum
+                    </p>
+
+                    <p class="mt-8 font-mono text-sm tracking-[.2em] text-white/45">
+                        2026.11.14
+                    </p>
+
+                    <h3 class="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
+                        下一場健康論壇，<br>
+                        11/14 再度展開。
+                    </h3>
+
+                    <p class="mt-6 text-base font-medium leading-loose text-white/65">
+                        健康議題不只屬於講座現場，也存在於每一天的飲食、睡眠、情緒與選擇之中。
+                        下一場論壇將延續威力馬國際對健康管理與生活照護的關注，
+                        陪伴更多夥伴一起聽見身體、理解自己。
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a class="inline-flex items-center justify-center border border-accent bg-accent px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-quiet"
+                            href="#theme">
+                            回到頁首
+                        </a>
+
+                        <a class="inline-flex items-center justify-center border border-white/25 px-5 py-3 text-sm font-bold text-white/80 transition-all duration-300 hover:border-accent hover:text-accent"
+                            href="#gallery">
+                            回顧活動紀錄
+                        </a>
+                    </div>
+                </aside>
             </div>
-            <div class="flex items-end">
-                <a class="border ink-line px-6 py-4 text-sm font-semibold transition hover:bg-ink hover:text-surface"
-                    href="#top">回到頁首</a>
+
+            <div
+                class="mt-14 flex flex-col gap-4 border-t border-white/15 pt-8 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
+                <p>© 2026 WELLMARKET Biotech Co., Ltd. All Rights Reserved.</p>
+                <p>本頁內容為第 23 次健康論壇活動紀錄，文字與圖片未經授權請勿轉載或重製。</p>
             </div>
         </div>
     </footer>
