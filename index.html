@@ -427,24 +427,25 @@
 
             <div class="mt-16 border-y border-black/15">
                 <article class="grid gap-5 py-9 md:grid-cols-[220px_1fr] md:items-start">
-                   <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
+                    <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
                         POINT 01
                     </p>
                     <div>
-                         <h3 class="font-serif text-4xl text-muted font-bold">
+                        <h3 class="font-serif text-4xl text-muted font-bold">
                             看見日常疲憊背後的訊號
                         </h3>
- <p class="mt-3 text-base font-medium leading-loose text-border">                            一段看似平常的生活壓力，可能正在透過睡不好、容易疲倦、胸悶、心悸或消化不適慢慢浮現。
+                        <p class="mt-3 text-base font-medium leading-loose text-border">
+                            一段看似平常的生活壓力，可能正在透過睡不好、容易疲倦、胸悶、心悸或消化不適慢慢浮現。
                         </p>
                     </div>
                 </article>
 
                 <article class="grid gap-5 border-t border-black/15 py-9 md:grid-cols-[220px_1fr] md:items-start">
-                   <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
+                    <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
                         POINT 02
                     </p>
                     <div>
-                         <h3 class="font-serif text-4xl text-muted font-bold">
+                        <h3 class="font-serif text-4xl text-muted font-bold">
                             活動前先建立主題脈絡
                         </h3>
                         <p class="mt-3 text-base font-medium leading-loose text-border">
@@ -454,7 +455,7 @@
                 </article>
 
                 <article class="grid gap-5 border-t border-black/15 py-9 md:grid-cols-[220px_1fr] md:items-start">
-                   <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
+                    <p class="font-mono text-sm tracking-[.2em] text-accent-2">T
                         POINT 03
                     </p>
                     <div>
@@ -471,46 +472,180 @@
     </section>
 
     <!-- 05 主持／主講／分享陣容 -->
-    <section id="lineup" class="reveal mist-band">
+    <section id="lineup" class="reveal bg-paper">
         <div class="mx-auto max-w-420 px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
-            <div class="grid gap-10 md:grid-cols-[.38fr_1fr]">
+            <div class="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
                 <div>
-                    <p class="mono text-xs font-semibold tracking-[.28em] text-accent">05 / 主持／主講／分享陣容</p>
-                    <h2 class="serif mt-6 text-5xl leading-tight sm:text-6xl">讓每個角色都有清楚的舞台功能。</h2>
+                    <p class="font-mono mb-8 text-xs font-semibold uppercase tracking-[.28em] text-accent-2">
+                        05 / 主持・主講・分享陣容
+                    </p>
+
+                    <h2 class="font-serif chapter-title mt-6 text-5xl leading-tight text-black sm:text-6xl lg:text-7xl">
+                        從專業觀點<br>
+                        到真實生命經驗，<br>
+                        <b class="font-medium text-accent">
+                            讓健康被理解，也被感受。
+                        </b>
+                    </h2>
                 </div>
-                <div class="grid gap-4">
-                    <article
-                        class="grid gap-5 border ink-line bg-surface p-6 md:grid-cols-[160px_1fr_auto] md:items-center">
-                        <p class="mono text-sm tracking-[.22em] text-muted">HOST</p>
-                        <div>
-                            <h3 class="serif text-4xl">主持人姓名</h3>
-                            <p class="mt-2 text-sm text-muted">串接醫學語言與品牌觀點，建立論壇節奏。</p>
-                        </div>
-                        <span class="border ink-line px-4 py-2 text-xs">主持</span>
-                    </article>
-                    <article
-                        class="grid gap-5 border ink-line bg-surface p-6 md:grid-cols-[160px_1fr_auto] md:items-center">
-                        <p class="mono text-sm tracking-[.22em] text-muted">KEYNOTE</p>
-                        <div>
-                            <h3 class="serif text-4xl">主講醫師姓名</h3>
-                            <p class="mt-2 text-sm text-muted">主題演講：壓力、身體訊號與內分泌失衡。</p>
-                        </div>
-                        <span class="border ink-line px-4 py-2 text-xs">主講</span>
-                    </article>
-                    <article
-                        class="grid gap-5 border ink-line bg-surface p-6 md:grid-cols-[160px_1fr_auto] md:items-center">
-                        <p class="mono text-sm tracking-[.22em] text-muted">VOICE</p>
-                        <div>
-                            <h3 class="serif text-4xl">分享嘉賓姓名</h3>
-                            <p class="mt-2 text-sm text-muted">以真實經驗補足專業講述，讓觀眾理解改變如何發生。</p>
-                        </div>
-                        <span class="border ink-line px-4 py-2 text-xs">分享</span>
-                    </article>
+
+                <div>
+                    <p class="body-copy max-w-3xl text-lg font-medium leading-loose text-muted sm:text-xl">
+                        本次健康論壇以醫師主講為核心，並透過主持引導、產品分享與事業分享，
+                        讓觀眾從不同角色看見健康議題如何回到生活、身體與團隊支持之中。
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-3" role="tablist" aria-label="活動陣容分類">
+                        <button
+                            class="lineup-filter border border-accent-2 bg-accent-2 px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[.18em] text-white transition"
+                            type="button" data-lineup-filter="all" aria-pressed="true">
+                            全部
+                        </button>
+
+                        <button
+                            class="lineup-filter border ink-line px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[.18em] text-muted transition hover:border-accent-2 hover:text-accent-2"
+                            type="button" data-lineup-filter="host" aria-pressed="false">
+                            主持
+                        </button>
+
+                        <button
+                            class="lineup-filter border ink-line px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[.18em] text-muted transition hover:border-accent-2 hover:text-accent-2"
+                            type="button" data-lineup-filter="keynote" aria-pressed="false">
+                            產品主講
+                        </button>
+
+                        <button
+                            class="lineup-filter border ink-line px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[.18em] text-muted transition hover:border-accent-2 hover:text-accent-2"
+                            type="button" data-lineup-filter="product" aria-pressed="false">
+                            產品分享
+                        </button>
+
+                        <button
+                            class="lineup-filter border ink-line px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[.18em] text-muted transition hover:border-accent-2 hover:text-accent-2"
+                            type="button" data-lineup-filter="business" aria-pressed="false">
+                            事業分享
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            <div id="lineupList" class="mt-14 grid gap-5 lg:grid-cols-2">
+                <!-- 主持人 -->
+                <article
+                    class="lineup-card grid overflow-hidden border ink-line bg-surface transition duration-300 md:grid-cols-[230px_1fr]"
+                    data-lineup-role="host">
+                    <div class="flex min-h-[260px] items-center justify-center p-4">
+                        <img class="max-h-[300px] w-full object-contain" src="./src/img/主持主講分享/主持人.webp" alt="主持人照片">
+                    </div>
+
+                    <div class="min-w-0 p-6">
+                        <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
+                            HOST
+                        </p>
+
+                        <h3 class="mt-5 font-serif text-4xl font-medium leading-tight text-black sm:text-5xl">
+                            張碧蓮<br>
+                            藍鑽
+                        </h3>
+
+                        <p class="mt-3 text-base font-semibold text-accent">
+                            論壇主持・節奏引導
+                        </p>
+
+                        <p class="mt-5 text-base font-medium leading-loose text-muted">
+                            擔任本次健康論壇主持人，以穩定而溫暖的節奏串聯醫師主講、產品觀點與夥伴分享。 她讓每一段內容不只是被聽見，也能自然走進現場每一位夥伴的生活經驗裡。
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 產品主講 -->
+                <article
+                    class="lineup-card grid overflow-hidden border ink-line bg-surface transition duration-300 md:grid-cols-[230px_1fr]"
+                    data-lineup-role="keynote">
+                    <div class="flex min-h-[260px] items-center justify-center p-4">
+                        <img class="max-h-[300px] w-full object-contain" src="./src/img/主持主講分享/產品主講.webp" alt="產品主講照片">
+                    </div>
+
+                    <div class="min-w-0 p-6">
+                        <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
+                            PRODUCT KEYNOTE
+                        </p>
+
+                        <h3 class="mt-5 font-serif text-4xl font-medium leading-tight text-black sm:text-5xl">
+                            陳育金<br>
+                            鑽石
+                        </h3>
+
+                        <p class="mt-3 text-base font-semibold text-accent">
+                            產品主講・專業觀點
+                        </p>
+
+                        <p class="mt-5 text-base font-medium leading-loose text-muted">
+                            從產品觀點出發，帶領夥伴理解 3+1 與日常健康照護之間的關聯。 讓產品不只是被介紹，而是成為看懂身體訊號、建立健康習慣的一種入口。
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 產品分享 -->
+                <article
+                    class="lineup-card grid overflow-hidden border ink-line bg-surface transition duration-300 md:grid-cols-[230px_1fr]"
+                    data-lineup-role="product">
+                    <div class="flex min-h-[260px] items-center justify-center p-4">
+                        <img class="max-h-[300px] w-full object-contain" src="./src/img/主持主講分享/產品分享.webp"
+                            alt="產品分享嘉賓照片">
+                    </div>
+
+                    <div class="min-w-0 p-6">
+                        <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
+                            PRODUCT SHARING
+                        </p>
+
+                        <h3 class="mt-5 font-serif text-4xl font-medium leading-tight text-black sm:text-5xl">
+                            激密之星 <br>
+                            產品分享
+                        </h3>
+
+                        <p class="mt-3 text-base font-semibold text-accent">
+                            產品分享・真實經驗
+                        </p>
+
+                        <p class="mt-5 text-base font-medium leading-loose text-muted">
+                            由陳諭葳、黃孟蓁、林愛呈、阮詩翃、吳哲村分享產品使用、生活觀察與健康感受。 他們從自己的身體經驗出發，讓產品分享不只是心得， 也成為一段重新照顧自己的真實紀錄。
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 事業分享 -->
+                <article
+                    class="lineup-card grid overflow-hidden border ink-line bg-surface transition duration-300 md:grid-cols-[230px_1fr]"
+                    data-lineup-role="business">
+                    <div class="flex min-h-[260px] items-center justify-center p-4">
+                        <img class="max-h-[300px] w-full object-contain" src="./src/img/主持主講分享/事業分享.webp"
+                            alt="事業分享夥伴照片">
+                    </div>
+
+                    <div class="min-w-0 p-6">
+                        <p class="font-mono text-base font-semibold uppercase tracking-[.22em] text-accent-2">
+                            BUSINESS SHARING
+                        </p>
+
+                        <h3 class="mt-5 font-serif text-4xl font-medium leading-tight text-black sm:text-5xl">
+                            事業分享 <br>
+                            夥伴
+                        </h3>
+
+                        <p class="mt-3 text-base font-semibold text-accent">
+                            事業分享・夥伴經驗
+                        </p>
+
+                        <p class="mt-5 text-base font-medium leading-loose text-muted">
+                            由楊銘琪、鄧美蘭、古瑞完、張玫瑰、張沁嵐分享事業推進與團隊經營經驗。 從使用者到分享者，他們把健康觀察、生活改變與事業選擇串連起來， 讓一份產品經驗延伸成更多人的健康支持。
+                        </p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
-
     <!-- 06 新經理優惠 -->
     <section id="manager" class="reveal bg-[#f4f5f099]">
         <div class="mx-auto grid max-w-420 gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-10 lg:py-28">

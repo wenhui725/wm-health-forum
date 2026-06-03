@@ -145,6 +145,38 @@ navLinks.forEach((link) => {
     });
 });
 
+const lineupFilters = document.querySelectorAll(".lineup-filter");
+const lineupCards = document.querySelectorAll(".lineup-card");
+
+lineupFilters.forEach((filterButton) => {
+    filterButton.addEventListener("click", () => {
+        const selectedRole = filterButton.dataset.lineupFilter;
+
+        lineupFilters.forEach((button) => {
+            button.setAttribute("aria-pressed", "false");
+            button.classList.remove("border-accent-2", "bg-accent-2", "text-white");
+            button.classList.add("ink-line", "text-muted");
+        });
+
+        filterButton.setAttribute("aria-pressed", "true");
+        filterButton.classList.remove("ink-line", "text-muted");
+        filterButton.classList.add("border-accent-2", "bg-accent-2", "text-white");
+
+        lineupCards.forEach((card) => {
+            const cardRole = card.dataset.lineupRole;
+            const shouldShow = selectedRole === "all" || selectedRole === cardRole;
+
+            if (shouldShow) {
+                card.classList.remove("hidden");
+                card.classList.add("grid");
+            } else {
+                card.classList.add("hidden");
+                card.classList.remove("grid");
+            }
+        });
+    });
+});
+
 window.addEventListener("scroll", updateNavActive, { passive: true });
 window.addEventListener("resize", updateNavActive);
 updateNavActive();

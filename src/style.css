@@ -25,9 +25,9 @@
     --surface: oklch(100% 0 0);
     --fg: #0d0b03;
     --muted: #425066;
-    --border: #393939;
+    --border: #0d0b03;
     --accent: #8B6B1B;
-    --accent-2: #CE0045;
+    --accent-2: #7A1F2B;
 
     --font-sans-tc: "Noto Sans TC", "Source Han Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
     --font-serif-tc: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", serif;
