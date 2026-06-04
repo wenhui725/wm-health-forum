@@ -152,27 +152,45 @@ lineupFilters.forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
         const selectedRole = filterButton.dataset.lineupFilter;
 
+        // 先把所有按鈕恢復成「未選取」樣式
         lineupFilters.forEach((button) => {
             button.setAttribute("aria-pressed", "false");
-            button.classList.remove("border-accent-2", "bg-accent-2", "text-white");
-            button.classList.add("ink-line", "text-muted");
+
+            button.classList.remove(
+                "border-accent-2",
+                "bg-accent-2",
+                "text-white"
+            );
+
+            button.classList.add(
+                "border-black/10",
+                "bg-surface",
+                "text-muted"
+            );
         });
 
+        // 再把目前點擊的按鈕改成「選取中」樣式
         filterButton.setAttribute("aria-pressed", "true");
-        filterButton.classList.remove("ink-line", "text-muted");
-        filterButton.classList.add("border-accent-2", "bg-accent-2", "text-white");
 
+        filterButton.classList.remove(
+            "border-black/10",
+            "bg-surface",
+            "text-muted"
+        );
+
+        filterButton.classList.add(
+            "border-accent-2",
+            "bg-accent-2",
+            "text-white"
+        );
+
+        // 篩選卡片
         lineupCards.forEach((card) => {
             const cardRole = card.dataset.lineupRole;
             const shouldShow = selectedRole === "all" || selectedRole === cardRole;
 
-            if (shouldShow) {
-                card.classList.remove("hidden");
-                card.classList.add("grid");
-            } else {
-                card.classList.add("hidden");
-                card.classList.remove("grid");
-            }
+            card.classList.toggle("hidden", !shouldShow);
+            card.classList.toggle("grid", shouldShow);
         });
     });
 });
