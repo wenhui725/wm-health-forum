@@ -1,5 +1,9 @@
 const headerEl = document.querySelector("#siteHeader");
 
+/* =========================
+   Header glass effect
+   ========================= */
+
 const updateHeaderGlass = () => {
     const isScrolled = window.scrollY > 20;
 
@@ -9,23 +13,36 @@ const updateHeaderGlass = () => {
     headerEl?.classList.toggle("shadow-quiet", isScrolled);
 };
 
-window.addEventListener("scroll", updateHeaderGlass);
+window.addEventListener("scroll", updateHeaderGlass, { passive: true });
 updateHeaderGlass();
+
+
+/* =========================
+   Mobile menu
+   ========================= */
+
 const menuButton = document.querySelector("#menuButton");
 const mobileMenu = document.querySelector("#mobileMenu");
 
 menuButton?.addEventListener("click", () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
     menuButton.setAttribute("aria-expanded", String(!isOpen));
-    mobileMenu.classList.toggle("hidden", isOpen);
+    mobileMenu?.classList.toggle("hidden", isOpen);
 });
 
 mobileMenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-        menuButton.setAttribute("aria-expanded", "false");
+        menuButton?.setAttribute("aria-expanded", "false");
         mobileMenu.classList.add("hidden");
     });
 });
+
+
+/* =========================
+   Ticket option
+   若目前頁面沒有 ticket-option，也不會報錯
+   ========================= */
 
 const ticketCopy = {
     standard: "一般席｜價格、開放時間與名額待官方公告。建議文案語氣：保留席次、完成資料登錄、收到確認通知。",
@@ -35,11 +52,26 @@ const ticketCopy = {
 
 document.querySelectorAll(".ticket-option").forEach((button) => {
     button.addEventListener("click", () => {
-        document.querySelectorAll(".ticket-option").forEach((item) => item.setAttribute("aria-pressed", "false"));
+        const ticketNote = document.querySelector("#ticketNote");
+        const ticketType = button.dataset.ticket;
+
+        document.querySelectorAll(".ticket-option").forEach((item) => {
+            item.setAttribute("aria-pressed", "false");
+        });
+
         button.setAttribute("aria-pressed", "true");
-        document.querySelector("#ticketNote").textContent = ticketCopy[button.dataset.ticket];
+
+        if (ticketNote && ticketCopy[ticketType]) {
+            ticketNote.textContent = ticketCopy[ticketType];
+        }
     });
 });
+
+
+/* =========================
+   Story tabs
+   若目前頁面沒有 story-tab，也不會報錯
+   ========================= */
 
 const storyCopy = {
     sleep: {
@@ -62,30 +94,72 @@ const storyCopy = {
 document.querySelectorAll(".story-tab").forEach((button) => {
     button.addEventListener("click", () => {
         const current = storyCopy[button.dataset.story];
-        document.querySelectorAll(".story-tab").forEach((item) => item.setAttribute("aria-selected", "false"));
+        const storyTitle = document.querySelector("#storyTitle");
+        const storyMeta = document.querySelector("#storyMeta");
+        const storyBody = document.querySelector("#storyBody");
+
+        if (!current || !storyTitle || !storyMeta || !storyBody) return;
+
+        document.querySelectorAll(".story-tab").forEach((item) => {
+            item.setAttribute("aria-selected", "false");
+        });
+
         button.setAttribute("aria-selected", "true");
-        document.querySelector("#storyTitle").textContent = current.title;
-        document.querySelector("#storyMeta").textContent = current.meta;
-        document.querySelector("#storyBody").textContent = current.body;
+
+        storyTitle.textContent = current.title;
+        storyMeta.textContent = current.meta;
+        storyBody.textContent = current.body;
     });
 });
+
+
+/* =========================
+   Speaker toggle
+   醫師講題摘要展開
+   ========================= */
 
 document.querySelectorAll(".speaker-toggle").forEach((button) => {
     button.addEventListener("click", () => {
         const isOpen = button.getAttribute("aria-expanded") === "true";
+        const detail = button.querySelector(".speaker-detail");
+
+        /*
+          優先抓 speaker-icon。
+          如果 HTML 還沒加 speaker-icon，就退而求其次抓最後一個 font-mono。
+        */
+        const icon =
+            button.querySelector(".speaker-icon") ||
+            button.querySelector(".font-mono");
+
         button.setAttribute("aria-expanded", String(!isOpen));
-        button.querySelector(".speaker-detail").classList.toggle("hidden", isOpen);
-        button.querySelector(".mono").textContent = isOpen ? "＋" : "－";
+
+        detail?.classList.toggle("hidden", isOpen);
+
+        if (icon) {
+            icon.textContent = isOpen ? "＋" : "－";
+        }
     });
 });
 
+
+/* =========================
+   Reveal animation
+   ========================= */
+
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+        }
     });
-}, { threshold: 0.18 });
+}, {
+    threshold: 0.18
+});
 
-document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+document.querySelectorAll(".reveal").forEach((item) => {
+    revealObserver.observe(item);
+});
+
 
 /* =========================
    Nav active 鎖定效果
@@ -113,13 +187,16 @@ const setNavActive = (sectionId) => {
     });
 };
 
+const getHeaderOffset = () => {
+    return headerEl?.offsetHeight || 88;
+};
+
 const updateNavActive = () => {
-    let currentId = "";
+    const scrollPosition = window.scrollY + getHeaderOffset() + 24;
+    let currentId = navSections[0]?.id || "";
 
     navSections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= 180) {
+        if (scrollPosition >= section.offsetTop) {
             currentId = section.id;
         }
     });
@@ -145,6 +222,12 @@ navLinks.forEach((link) => {
     });
 });
 
+
+/* =========================
+   Lineup filter
+   活動陣容分類篩選
+   ========================= */
+
 const lineupFilters = document.querySelectorAll(".lineup-filter");
 const lineupCards = document.querySelectorAll(".lineup-card");
 
@@ -152,7 +235,9 @@ lineupFilters.forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
         const selectedRole = filterButton.dataset.lineupFilter;
 
-        // 先把所有按鈕恢復成「未選取」樣式
+        /*
+          先把所有按鈕恢復成未選取樣式
+        */
         lineupFilters.forEach((button) => {
             button.setAttribute("aria-pressed", "false");
 
@@ -169,7 +254,9 @@ lineupFilters.forEach((filterButton) => {
             );
         });
 
-        // 再把目前點擊的按鈕改成「選取中」樣式
+        /*
+          再把目前點擊的按鈕改成選取中樣式
+        */
         filterButton.setAttribute("aria-pressed", "true");
 
         filterButton.classList.remove(
@@ -184,7 +271,9 @@ lineupFilters.forEach((filterButton) => {
             "text-white"
         );
 
-        // 篩選卡片
+        /*
+          篩選卡片
+        */
         lineupCards.forEach((card) => {
             const cardRole = card.dataset.lineupRole;
             const shouldShow = selectedRole === "all" || selectedRole === cardRole;
@@ -195,6 +284,12 @@ lineupFilters.forEach((filterButton) => {
     });
 });
 
+
+/* =========================
+   Events
+   ========================= */
+
 window.addEventListener("scroll", updateNavActive, { passive: true });
 window.addEventListener("resize", updateNavActive);
+
 updateNavActive();
