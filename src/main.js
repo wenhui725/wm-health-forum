@@ -236,38 +236,38 @@ lineupFilters.forEach((filterButton) => {
         const selectedRole = filterButton.dataset.lineupFilter;
 
         /*
-          先把所有按鈕恢復成未選取樣式
+          先把所有按鈕恢復成未選取：白底黑字
         */
         lineupFilters.forEach((button) => {
             button.setAttribute("aria-pressed", "false");
 
             button.classList.remove(
-                "border-accent-2",
-                "bg-accent-2",
+                "border-black",
+                "bg-black",
                 "text-white"
             );
 
             button.classList.add(
                 "border-black/10",
-                "bg-surface",
-                "text-muted"
+                "bg-white",
+                "text-black"
             );
         });
 
         /*
-          再把目前點擊的按鈕改成選取中樣式
+          再把目前點擊的按鈕改成選取中：黑底白字
         */
         filterButton.setAttribute("aria-pressed", "true");
 
         filterButton.classList.remove(
             "border-black/10",
-            "bg-surface",
-            "text-muted"
+            "bg-white",
+            "text-black"
         );
 
         filterButton.classList.add(
-            "border-accent-2",
-            "bg-accent-2",
+            "border-black",
+            "bg-black",
             "text-white"
         );
 
@@ -283,7 +283,6 @@ lineupFilters.forEach((filterButton) => {
         });
     });
 });
-
 
 /* =========================
    Events
