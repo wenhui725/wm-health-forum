@@ -16,29 +16,6 @@ const updateHeaderGlass = () => {
 window.addEventListener("scroll", updateHeaderGlass, { passive: true });
 updateHeaderGlass();
 
-
-/* =========================
-   Mobile menu
-   ========================= */
-
-const menuButton = document.querySelector("#menuButton");
-const mobileMenu = document.querySelector("#mobileMenu");
-
-menuButton?.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-
-    menuButton.setAttribute("aria-expanded", String(!isOpen));
-    mobileMenu?.classList.toggle("hidden", isOpen);
-});
-
-mobileMenu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        menuButton?.setAttribute("aria-expanded", "false");
-        mobileMenu.classList.add("hidden");
-    });
-});
-
-
 /* =========================
    Ticket option
    若目前頁面沒有 ticket-option，也不會報錯
@@ -160,7 +137,6 @@ document.querySelectorAll(".reveal").forEach((item) => {
     revealObserver.observe(item);
 });
 
-
 /* =========================
    Nav active 鎖定效果
    ========================= */
@@ -174,11 +150,15 @@ const navSections = navLinks
     })
     .filter(Boolean);
 
-const clearNavActive = () => {
-    navLinks.forEach((link) => {
-        link.classList.remove("is-active");
-    });
-};
+/*
+  避免桌機 nav + 手機 nav 重複抓到同一個 section，
+  這裡做去重處理。
+*/
+const uniqueNavSections = [...new Map(
+    navSections.map((section) => [section.id, section])
+).values()];
+
+let currentActiveId = "";
 
 const setNavActive = (sectionId) => {
     navLinks.forEach((link) => {
@@ -188,40 +168,85 @@ const setNavActive = (sectionId) => {
 };
 
 const getHeaderOffset = () => {
-    return headerEl?.offsetHeight || 88;
+    return headerEl?.offsetHeight || 112;
 };
 
-const updateNavActive = () => {
-    const scrollPosition = window.scrollY + getHeaderOffset() + 24;
-    let currentId = navSections[0]?.id || "";
+/*
+  只控制手機橫向 nav 自動滑動
+*/
+const scrollMobileNavTo = (sectionId, inlinePosition = "center") => {
+    const mobileNav = document.querySelector("#mobileSectionNav");
 
-    navSections.forEach((section) => {
+    if (!mobileNav) return;
+
+    const targetLink = mobileNav.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+    targetLink?.scrollIntoView({
+        behavior: "smooth",
+        inline: inlinePosition,
+        block: "nearest"
+    });
+};
+
+/*
+  滾動時更新 active
+  同時讓手機 nav 自動滑到目前章節
+*/
+const updateNavActive = () => {
+    const scrollPosition = window.scrollY + getHeaderOffset() + 36;
+    let activeId = uniqueNavSections[0]?.id || "";
+
+    uniqueNavSections.forEach((section) => {
         if (scrollPosition >= section.offsetTop) {
-            currentId = section.id;
+            activeId = section.id;
         }
     });
 
-    if (!currentId) {
-        clearNavActive();
-        return;
-    }
+    if (!activeId) return;
 
-    setNavActive(currentId);
+    setNavActive(activeId);
+
+    if (activeId !== currentActiveId) {
+        currentActiveId = activeId;
+        scrollMobileNavTo(activeId);
+    }
 };
 
+/*
+  點擊 nav 時：
+  1. 切換 active
+  2. 手機橫向 nav 自動滑到該按鈕
+*/
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
         const targetId = link.getAttribute("href")?.replace("#", "");
 
-        if (!targetId || targetId === "theme") {
-            clearNavActive();
-            return;
-        }
+        if (!targetId) return;
 
+        currentActiveId = targetId;
         setNavActive(targetId);
+        scrollMobileNavTo(targetId);
     });
 });
 
+/*
+  點擊 Logo 時：
+  1. 回到 Hero
+  2. 01 主題變 active
+  3. 手機 nav 滑回最前面
+*/
+const siteLogo = document.querySelector(".site-logo");
+
+siteLogo?.addEventListener("click", () => {
+    currentActiveId = "theme";
+    setNavActive("theme");
+    scrollMobileNavTo("theme", "start");
+});
+
+window.addEventListener("scroll", updateNavActive, { passive: true });
+window.addEventListener("resize", updateNavActive);
+
+updateNavActive();
 
 /* =========================
    Lineup filter
